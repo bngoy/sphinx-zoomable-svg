@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sphinx-zoomable-images"
+version = "0.1.0"
+description = "Sphinx extension providing a zoomable-figure directive with pan, zoom, and fullscreen support"
+readme = "README.md"
+license = "BSD-2-Clause"
+requires-python = ">=3.9"
+dependencies = ["sphinx>=5.0"]
+
+[project.optional-dependencies]
+test = ["pytest", "beautifulsoup4"]
+
+[tool.setuptools.packages.find]
+include = ["sphinx_zoomable_images*"]
+
+[tool.setuptools.package-data]
+sphinx_zoomable_images = ["static/**/*"]

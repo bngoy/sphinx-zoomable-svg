@@ -1,0 +1,95 @@
+/* Zoomable Images - Sphinx extension styles */
+
+.zoomable-figure {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.zoomable-figure.align-left {
+  text-align: left;
+}
+
+.zoomable-figure.align-right {
+  text-align: right;
+}
+
+.zoomable-figure.align-center {
+  text-align: center;
+}
+
+.zoomable-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fafafa;
+  cursor: grab;
+}
+
+.zoomable-container:active {
+  cursor: grabbing;
+}
+
+.zoomable-container svg {
+  display: block;
+}
+
+/* Controls overlay */
+.zoomable-controls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 10;
+}
+
+.zoomable-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+  backdrop-filter: blur(4px);
+}
+
+.zoomable-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: #999;
+  color: #000;
+}
+
+.zoomable-btn:active {
+  background: #e0e0e0;
+}
+
+.zoomable-btn svg {
+  pointer-events: none;
+}
+
+/* Caption */
+.zoomable-figure figcaption {
+  margin-top: 0.5em;
+  font-style: italic;
+  color: #555;
+  font-size: 0.9em;
+}
+
+/* Legend */
+.zoomable-legend {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #666;
+  text-align: left;
+}
