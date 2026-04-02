@@ -13,7 +13,11 @@ from docutils.parsers.rst import directives
 from sphinx.application import Sphinx
 from sphinx.util.docutils import SphinxDirective
 
-__version__ = "0.1.0"
+try:
+    from importlib.metadata import version as _get_version
+    __version__ = _get_version("sphinx-zoomable-images")
+except Exception:
+    __version__ = (Path(__file__).parent.parent / "VERSION").read_text().strip()
 
 SVG_EXTENSIONS = {".svg"}
 RASTER_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".tiff"}

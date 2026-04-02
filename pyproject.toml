@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sphinx-zoomable-images"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Sphinx extension providing a zoomable-figure directive with pan, zoom, and fullscreen support"
 readme = "README.md"
 license = "BSD-2-Clause"
@@ -30,6 +30,9 @@ Issues = "https://github.com/bngoy/sphinx-zoomable-svg/issues"
 
 [project.optional-dependencies]
 test = ["pytest", "beautifulsoup4"]
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
 
 [tool.setuptools.packages.find]
 include = ["sphinx_zoomable_images*"]
