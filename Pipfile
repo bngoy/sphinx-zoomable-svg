@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+sphinx-zoomable-images = {editable = true, path = "."}
+
+[dev-packages]
+sphinx-zoomable-images = {editable = true, extras = ["test"], path = "."}
+
+[requires]
+python_version = "3.11"

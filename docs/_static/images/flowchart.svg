@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="700" fill="#fafafa" rx="8"/>
+
+  <!-- Start -->
+  <ellipse cx="300" cy="40" rx="60" ry="25" fill="#c8e6c9" stroke="#388e3c" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#1b5e20">Start</text>
+
+  <!-- Receive Request -->
+  <rect x="210" y="100" width="180" height="45" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="300" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#0d47a1">Receive HTTP Request</text>
+
+  <!-- Auth check diamond -->
+  <polygon points="300,180 400,230 300,280 200,230" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="300" y="227" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e65100">Authenticated?</text>
+
+  <!-- Yes path -->
+  <rect x="210" y="320" width="180" height="45" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="300" y="347" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#0d47a1">Parse Request Body</text>
+
+  <!-- No path - 401 -->
+  <rect x="430" y="210" width="130" height="40" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="495" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#b71c1c">Return 401</text>
+
+  <!-- Validate diamond -->
+  <polygon points="300,400 390,445 300,490 210,445" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="300" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e65100">Valid data?</text>
+
+  <!-- No - 400 -->
+  <rect x="430" y="425" width="130" height="40" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="495" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#b71c1c">Return 400</text>
+
+  <!-- Process -->
+  <rect x="210" y="530" width="180" height="45" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="300" y="557" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#0d47a1">Process &amp; Save</text>
+
+  <!-- Return 200 -->
+  <rect x="235" y="615" width="130" height="40" rx="6" fill="#c8e6c9" stroke="#388e3c" stroke-width="2"/>
+  <text x="300" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1b5e20">Return 200 OK</text>
+
+  <!-- Arrows -->
+  <line x1="300" y1="65" x2="300" y2="100" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="300" y1="145" x2="300" y2="180" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="300" y1="280" x2="300" y2="320" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="290" y="305" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#388e3c">Yes</text>
+  <line x1="400" y1="230" x2="430" y2="230" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="415" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#c62828">No</text>
+  <line x1="300" y1="365" x2="300" y2="400" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="300" y1="490" x2="300" y2="530" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="290" y="515" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#388e3c">Yes</text>
+  <line x1="390" y1="445" x2="430" y2="445" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="415" y="437" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#c62828">No</text>
+  <line x1="300" y1="575" x2="300" y2="615" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>
