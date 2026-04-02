@@ -8,10 +8,10 @@ Project guidelines for AI-assisted development.
 
 ## Tech Stack
 
-- **Python** (>=3.9) -- Sphinx directive and extension plumbing
+- **Python** (>=3.11) -- Sphinx directive and extension plumbing
 - **JavaScript** (ES5, no build step) -- Client-side zoom/pan/fullscreen logic
 - **CSS** -- Control overlay and container styling
-- **Sphinx** (>=5.0) -- Documentation framework this extension plugs into
+- **Sphinx** (>=9.0) -- Documentation framework this extension plugs into
 
 ## Project Structure
 
