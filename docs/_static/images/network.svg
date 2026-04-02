@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" rx="8"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333">Network Architecture</text>
+
+  <!-- Internet cloud -->
+  <ellipse cx="400" cy="100" rx="80" ry="35" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="400" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1976d2">Internet</text>
+
+  <!-- Firewall -->
+  <rect x="355" y="170" width="90" height="40" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="400" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#e65100">Firewall</text>
+
+  <!-- Load Balancer -->
+  <rect x="340" y="250" width="120" height="40" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="400" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2e7d32">Load Balancer</text>
+
+  <!-- Web Servers -->
+  <rect x="100" y="340" width="100" height="50" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="150" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#0277bd">Web Server 1</text>
+  <text x="150" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">nginx</text>
+
+  <rect x="250" y="340" width="100" height="50" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="300" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#0277bd">Web Server 2</text>
+  <text x="300" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">nginx</text>
+
+  <rect x="450" y="340" width="100" height="50" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="500" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#0277bd">Web Server 3</text>
+  <text x="500" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">nginx</text>
+
+  <rect x="600" y="340" width="100" height="50" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="650" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#0277bd">Web Server 4</text>
+  <text x="650" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">nginx</text>
+
+  <!-- App Servers -->
+  <rect x="150" y="440" width="100" height="50" rx="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="200" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7b1fa2">App Server 1</text>
+  <text x="200" y="477" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Python/Django</text>
+
+  <rect x="350" y="440" width="100" height="50" rx="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="400" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7b1fa2">App Server 2</text>
+  <text x="400" y="477" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Python/Django</text>
+
+  <rect x="550" y="440" width="100" height="50" rx="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="600" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7b1fa2">App Server 3</text>
+  <text x="600" y="477" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Python/Django</text>
+
+  <!-- Database -->
+  <ellipse cx="250" cy="555" rx="70" ry="25" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="250" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#c62828">PostgreSQL</text>
+
+  <!-- Cache -->
+  <ellipse cx="550" cy="555" rx="60" ry="25" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+  <text x="550" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f57f17">Redis</text>
+
+  <!-- Connections -->
+  <line x1="400" y1="135" x2="400" y2="170" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="210" x2="400" y2="250" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <line x1="360" y1="290" x2="150" y2="340" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="380" y1="290" x2="300" y2="340" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="420" y1="290" x2="500" y2="340" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="440" y1="290" x2="650" y2="340" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <line x1="150" y1="390" x2="200" y2="440" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="300" y1="390" x2="200" y2="440" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="300" y1="390" x2="400" y2="440" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="390" x2="400" y2="440" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="390" x2="600" y2="440" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="650" y1="390" x2="600" y2="440" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <line x1="200" y1="490" x2="250" y2="530" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="490" x2="250" y2="530" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="490" x2="250" y2="530" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <line x1="200" y1="490" x2="550" y2="530" stroke="#666" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="490" x2="550" y2="530" stroke="#666" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="490" x2="550" y2="530" stroke="#666" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+</svg>
