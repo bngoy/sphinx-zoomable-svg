@@ -31,6 +31,10 @@ pipenv shell
 # Run tests
 pytest tests/ -v
 
+# Lint and format
+ruff check .
+ruff format --check .
+
 # Build reference docs (example gallery)
 sphinx-build -b html docs docs/_build
 

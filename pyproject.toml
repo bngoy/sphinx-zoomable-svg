@@ -30,6 +30,7 @@ Issues = "https://github.com/bngoy/sphinx-zoomable-svg/issues"
 
 [project.optional-dependencies]
 test = ["pytest", "beautifulsoup4"]
+dev = ["pytest", "beautifulsoup4", "ruff"]
 
 [tool.setuptools.dynamic]
 version = {file = "VERSION"}

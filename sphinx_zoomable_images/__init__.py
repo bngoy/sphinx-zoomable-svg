@@ -15,6 +15,7 @@ from sphinx.util.docutils import SphinxDirective
 
 try:
     from importlib.metadata import version as _get_version
+
     __version__ = _get_version("sphinx-zoomable-images")
 except Exception:
     __version__ = (Path(__file__).parent.parent / "VERSION").read_text().strip()
@@ -105,25 +106,25 @@ class ZoomableFigure(SphinxDirective):
 
         # Build the raw HTML for the interactive container
         html_parts = [
-            f'<figure{class_attr}>',
+            f"<figure{class_attr}>",
             f'  <div class="zoomable-container" id="{container_id}"'
             f' data-src="{image_url}" data-type="{image_type}"'
             f' data-alt="{alt}"{style_attr}>',
-            f'    <div class="zoomable-controls">',
-            f'      <button class="zoomable-btn zoomable-zoom-in" title="Zoom in">',
-            f'        <svg viewBox="0 0 24 24" width="18" height="18"><line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2"/><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2"/></svg>',
-            f'      </button>',
-            f'      <button class="zoomable-btn zoomable-zoom-out" title="Zoom out">',
-            f'        <svg viewBox="0 0 24 24" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2"/></svg>',
-            f'      </button>',
-            f'      <button class="zoomable-btn zoomable-reset" title="Reset view">',
-            f'        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M17.65 6.35A7.96 7.96 0 0012 4C7.58 4 4.01 7.58 4.01 12S7.58 20 12 20c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"/></svg>',
-            f'      </button>',
-            f'      <button class="zoomable-btn zoomable-fullscreen" title="Open fullscreen">',
-            f'        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" fill="currentColor"/></svg>',
-            f'      </button>',
-            f'    </div>',
-            f'  </div>',
+            '    <div class="zoomable-controls">',
+            '      <button class="zoomable-btn zoomable-zoom-in" title="Zoom in">',
+            '        <svg viewBox="0 0 24 24" width="18" height="18"><line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2"/><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2"/></svg>',
+            "      </button>",
+            '      <button class="zoomable-btn zoomable-zoom-out" title="Zoom out">',
+            '        <svg viewBox="0 0 24 24" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2"/></svg>',
+            "      </button>",
+            '      <button class="zoomable-btn zoomable-reset" title="Reset view">',
+            '        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M17.65 6.35A7.96 7.96 0 0012 4C7.58 4 4.01 7.58 4.01 12S7.58 20 12 20c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"/></svg>',
+            "      </button>",
+            '      <button class="zoomable-btn zoomable-fullscreen" title="Open fullscreen">',
+            '        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" fill="currentColor"/></svg>',
+            "      </button>",
+            "    </div>",
+            "  </div>",
         ]
 
         if caption:
