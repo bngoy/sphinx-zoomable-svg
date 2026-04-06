@@ -79,8 +79,14 @@ class ZoomableFigure(SphinxDirective):
         basename = os.path.basename(rel_filename)
         _pending_images[basename] = filename
 
-        # The image URL in the built output
-        image_url = posixpath.join("_images", basename)
+        # The image URL in the built output -- compute a relative path from
+        # the document's directory back to the build root so that pages in
+        # subdirectories (e.g. references/ref.html) correctly resolve the
+        # _images/ folder at the root of the build output.
+        docname = env.docname  # e.g. "references/ref"
+        depth = docname.count("/")
+        root_prefix = "../" * depth if depth else ""
+        image_url = posixpath.join(root_prefix + "_images", basename)
 
         # Build HTML
         container_id = f"zoomable-{env.new_serialno('zoomable')}"
