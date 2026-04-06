@@ -17,3 +17,8 @@ SVG without caption
 
 .. zoomable-figure:: sample.svg
    :alt: Simple SVG
+
+.. toctree::
+   :hidden:
+
+   subdir/page
