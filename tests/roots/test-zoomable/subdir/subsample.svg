@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect x="10" y="10" width="180" height="180" fill="#4a90d9" rx="10"/>
+  <circle cx="100" cy="80" r="30" fill="#fff"/>
+  <rect x="60" y="120" width="80" height="50" fill="#fff" rx="5"/>
+  <text x="100" y="155" text-anchor="middle" font-size="14" fill="#4a90d9">Zoomable</text>
+</svg>

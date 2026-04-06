@@ -55,3 +55,15 @@ def test_no_caption_figure(app, status, warning):
 
     # There should be at least two zoomable containers
     assert content.count('class="zoomable-container"') == 2
+
+
+@pytest.mark.sphinx("html", testroot="zoomable")
+def test_subdir_image_path_uses_relative_prefix(app, status, warning):
+    """Test that a page in a subdirectory uses ../_images/ for the data-src."""
+    app.build()
+
+    content = (Path(app.outdir) / "subdir" / "page.html").read_text()
+    assert 'data-src="../_images/subsample.svg"' in content
+
+    # Also verify the image was copied
+    assert (Path(app.outdir) / "_images" / "subsample.svg").exists()
